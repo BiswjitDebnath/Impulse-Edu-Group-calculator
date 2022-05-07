@@ -6,13 +6,14 @@ const [output, setOutput] = useState({value: "0"})
 const [value, setValue] = useState({
     first: '0',
     last: '',
-    op: "0",
     res: "0",
+    showres: "0"
 })
+const [show, setShow] = useState("0")
 const [signBit, setSignBit] = useState("1")
 
     return (
-        <Numcontext.Provider value={{ output, setOutput, value, setValue, signBit, setSignBit }}>
+        <Numcontext.Provider value={{ output, setOutput, value, setValue, signBit, setSignBit, show, setShow }}>
             {props.children}
         </Numcontext.Provider>
     )
